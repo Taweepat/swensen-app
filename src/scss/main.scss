@@ -1,0 +1,214 @@
+$primary-color1: #ffa200;
+$primary-color2: #6eda78;
+
+
+.banner-wrap {
+  color: #fff;
+  padding: 120px 0;
+  background-image: linear-gradient(180deg, #ff807c, #fd4b47);
+
+  .banner-content {
+    .heading {
+      color: inherit;
+      font-size: 50px;
+      line-height: 1.25;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    p {
+      font-size: 20px;
+      line-height: 1.2;
+      margin-top: 24px;
+    }
+  }
+
+  .banner-image {
+    padding: 0 15px;
+    img {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.btn-delivery {
+  width: auto;
+  height: 82px;
+  content: url("../../public/TH_normal.svg");
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+.mainbody {
+  height: 100vh;
+  .box {
+    width: 350px;
+    user-select: none;
+    &:hover {
+      border: 2px solid #000000;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: 990px) {
+  .banner-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .heading {
+      color: inherit;
+      font-size: 50px;
+      line-height: 1.25;
+      text-transform: uppercase;
+      text-align: center;
+      margin: 0;
+    }
+    p {
+      font-size: 20px;
+      line-height: 1.2;
+      margin-top: 24px;
+      text-align: center;
+    }
+  }
+
+  .banner-image {
+    padding: 0 15px;
+    img {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.carousel-box {
+  margin: 0 auto;
+  max-width: 1200px;
+  height: auto;
+  padding: 1rem;
+  overflow: hidden;
+
+  .slick-next,
+  .slick-prev {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+    &:hover {
+      opacity: 1;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .slick-prev:before {
+    content: "";
+  }
+  .slick-next:before {
+    content: "";
+  }
+  .slick-next {
+    right: 0;
+  }
+  .slick-prev {
+    left: 0;
+  }
+}
+
+.custom-dot {
+  display: flex !important;
+  list-style: none;
+  gap: 0.5rem;
+  justify-content: center;
+}
+.custom-dot li {
+  width: 20px;
+  height: 8px;
+  background-color: rgba(199, 198, 198, 0.493);
+  border-radius: 5px;
+}
+.custom-dot li:hover {
+  background-color: rgba(199, 198, 198, 0.493);
+}
+.custom-dot li.slick-active {
+  background-color: #fd4b47;
+}
+
+.deal-item {
+  padding: 0 12px;
+  border-radius: 12px;
+  overflow: hidden;
+  display: block !important;
+
+  a {
+    display: block;
+    outline: none;
+    overflow: hidden;
+  }
+
+  @mixin image($link) {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    border-radius: 12px;
+    min-height: 200px;
+    min-width: 345px;
+    display: list-item;
+    background-image: url($link);
+  }
+  .image1 {
+    @include image(
+      "https://firebasestorage.googleapis.com/v0/b/swensens-production.appspot.com/o/superdeal%2FSWS-cake-promo-2-14FEB 1440x810px.jpg?alt=media"
+    );
+  }
+  .image2 {
+    @include image(
+      "https://firebasestorage.googleapis.com/v0/b/swensens-production.appspot.com/o/superdeal%2FSWS-Gift Card-Chinese_1440x810px-01.jpg?alt=media"
+    );
+  }
+  .image3 {
+    @include image(
+      "https://firebasestorage.googleapis.com/v0/b/swensens-production.appspot.com/o/superdeal%2FBug Banner.png?alt=media"
+    );
+  }
+  .image4 {
+    @include image(
+      "https://firebasestorage.googleapis.com/v0/b/swensens-production.appspot.com/o/superdeal%2FAW-STRAWBERRY-APP-1440x810px_0.jpg?alt=media"
+    );
+  }
+}
+
+.dowload-page {
+  width: 100%;
+  .title-download {
+    width: 100%;
+    h1 {
+      font-size: 40px;
+    }
+  }
+  .icon-dl {
+    display: flex;
+    gap: 1rem;
+    img {
+      display: block;
+      width: 40%;
+      height: auto;
+    }
+  }
+}

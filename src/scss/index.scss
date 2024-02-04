@@ -1,0 +1,25 @@
+@import "https://fonts.googleapis.com/css?family=Kanit|Prompt";
+
+* {
+  font-family: "Kanit", sans-serif;
+  .ant-col{
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    
+  }
+}
+
+body {
+  margin: 0 auto;
+
+  font-family: "Kanit", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
