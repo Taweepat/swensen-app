@@ -96,10 +96,10 @@ function App() {
                 </Menu.Item>
               </Menu>
               <Flex justify="center" align="center" gap="middle">
-                <NavLink to="/Login">
+                <NavLink to="/Register">
                   <Button className="btn-main-outline">{t("register")}</Button>
                 </NavLink>
-                <NavLink to="/Register">
+                <NavLink to="/Login">
                   <Button className="btn-main" type="primary">
                     {t("login")}
                   </Button>
@@ -228,10 +228,10 @@ function App() {
         open={open}
       >
         <Flex justify="center" align="center" gap="middle" vertical>
-          <NavLink to="/Login">
+          <NavLink to="/Register">
             <Button className="btn-main-outline-w-full">{t("register")}</Button>
           </NavLink>
-          <NavLink to="/Register">
+          <NavLink to="/Login">
             <Button className="btn-main-w-full" type="primary">
               {t("login")}
             </Button>
