@@ -21,6 +21,8 @@ import { useTranslation } from "react-i18next";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import SubMenu from "antd/es/menu/SubMenu";
+import Register from "./register";
+import Login from "./login";
 
 function App() {
   const [lang, setLang] = useState("th");
@@ -67,9 +69,11 @@ function App() {
       <Row>
         <Col xs={0} lg={24}>
           <Layout.Header className="navbar-container">
-            <div className="image">
-              <div className="image-logo" />
-            </div>
+            <NavLink to="/">
+              <div className="image">
+                <div className="image-logo" />
+              </div>
+            </NavLink>
             <Space
               split={<Divider type="vertical" style={{ height: "6em" }} />}
             >
@@ -86,16 +90,20 @@ function App() {
                   }
                 >
                   <span>
-                    กรุณาเลือกที่อยู่จัดส่ง{" "}
+                    {t("delivery")}
                     <CaretDownOutlined style={{ paddingLeft: "8px" }} />
                   </span>
                 </Menu.Item>
               </Menu>
               <Flex justify="center" align="center" gap="middle">
-                <Button className="btn-main-outline">Register</Button>
-                <Button className="btn-main" type="primary">
-                  Login
-                </Button>
+                <NavLink to="/Login">
+                  <Button className="btn-main-outline">{t("register")}</Button>
+                </NavLink>
+                <NavLink to="/Register">
+                  <Button className="btn-main" type="primary">
+                    {t("login")}
+                  </Button>
+                </NavLink>
               </Flex>
               <Menu
                 style={{
@@ -120,7 +128,7 @@ function App() {
                       English
                     </Menu.Item>
                     <Menu.Item key="th" onClick={() => handleChange("th")}>
-                      ไทย
+                      Thai
                     </Menu.Item>
                   </Menu>
                 </SubMenu>
@@ -132,9 +140,11 @@ function App() {
           <Layout.Header className="navbar-container">
             <div className="navbar-sm">
               <img alt="" src="/icon-scan.svg" width={"auto"} height={32} />
-              <div className="image">
-                <div className="image-logo" />
-              </div>
+              <NavLink to="/">
+                <div className="image">
+                  <div className="image-logo" />
+                </div>
+              </NavLink>
               <div>
                 <Button type="text" className="btn">
                   <ShoppingOutlined />
@@ -152,7 +162,7 @@ function App() {
                 }
               >
                 <span>
-                  กรุณาเลือกที่อยู่จัดส่ง{" "}
+                  {t("delivery")}
                   <CaretDownOutlined style={{ paddingLeft: "8px" }} />
                 </span>
               </Menu.Item>
@@ -164,7 +174,8 @@ function App() {
         <div className="content">
           <Routes>
             <Route path="/" element={<MainPage />} />
-            <Route path="/test2" element={<></>} />
+            <Route path="/Login" element={<Login />} />
+            <Route path="/Register" element={<Register />} />
           </Routes>
         </div>
       </Layout.Content>
@@ -185,13 +196,13 @@ function App() {
             </Col>
             <Col xs={24} lg={21}>
               <ul className="footer-list">
-                <li>ไอศกรีมของเรา</li>
-                <li>สิทธิพิเศษ</li>
-                <li>รีวอร์ด</li>
-                <li>คูปองของฉัน</li>
-                <li>บัตรของขวัญ</li>
-                <li>บัตรสเวนเซ่นส์การ์ด</li>
-                <li>ข้อมูลของฉัน</li>
+                <li>{t("brandsite")}</li>
+                <li>{t("privilege")}</li>
+                <li>{t("reward")}</li>
+                <li>{t("mycoupons")}</li>
+                <li>{t("giftvoucher")}</li>
+                <li>{t("membercard")}</li>
+                <li>{t("myaccount")}</li>
               </ul>
             </Col>
           </Row>
@@ -203,24 +214,28 @@ function App() {
             <img alt="" src="/icon-youtube.svg" width={"auto"} height={32} />
           </div>
           <ul className="footer-social-list">
-            <li>คำถามที่พบบ่อย</li>
-            <li>ข้อกำหนดการใช้งาน</li>
-            <li>นโยบายความเป็นส่วนตัว</li>
+            <li>{t("faq")}</li>
+            <li>{t("terms")}</li>
+            <li>{t("policy")}</li>
           </ul>
         </div>
       </Layout.Footer>
       <Drawer
-        title="ยินดีต้อนรับ"
+        title={t("welcome")}
         placement={"right"}
         closable={false}
         onClose={onClose}
         open={open}
       >
         <Flex justify="center" align="center" gap="middle" vertical>
-          <Button className="btn-main-outline-w-full">Register</Button>
-          <Button className="btn-main-w-full" type="primary">
-            Login
-          </Button>
+          <NavLink to="/Login">
+            <Button className="btn-main-outline-w-full">{t("register")}</Button>
+          </NavLink>
+          <NavLink to="/Register">
+            <Button className="btn-main-w-full" type="primary">
+              {t("login")}
+            </Button>
+          </NavLink>
         </Flex>
       </Drawer>
     </Layout>

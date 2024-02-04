@@ -1,7 +1,6 @@
 $primary-color1: #ffa200;
 $primary-color2: #6eda78;
 
-
 .banner-wrap {
   color: #fff;
   padding: 120px 0;
@@ -51,38 +50,6 @@ $primary-color2: #6eda78;
     &:hover {
       border: 2px solid #000000;
       cursor: pointer;
-    }
-  }
-}
-
-@media (max-width: 990px) {
-  .banner-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    .heading {
-      color: inherit;
-      font-size: 50px;
-      line-height: 1.25;
-      text-transform: uppercase;
-      text-align: center;
-      margin: 0;
-    }
-    p {
-      font-size: 20px;
-      line-height: 1.2;
-      margin-top: 24px;
-      text-align: center;
-    }
-  }
-
-  .banner-image {
-    padding: 0 15px;
-    img {
-      display: block;
-      width: 100%;
-      max-width: 100%;
-      height: auto;
     }
   }
 }
@@ -194,21 +161,84 @@ $primary-color2: #6eda78;
   }
 }
 
-.dowload-page {
+.box-left {
   width: 100%;
-  .title-download {
+  display: flex;
+}
+.box-right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+}
+
+.app-screen {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  img {
+    display: block;
+    width: auto;
+    height: 40%;
+  }
+}
+
+.column-content {
+  width: 50%;
+  display: flex;
+  justify-content: end;
+  img {
     width: 100%;
-    h1 {
-      font-size: 40px;
+  }
+}
+
+@media (max-width: 990px) {
+  .banner-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    .heading {
+      color: inherit;
+      font-size: 20px  !important;
+      line-height: 1.25;
+      text-align: center;
+      margin: 0;
+    }
+    p {
+      font-size: 16px !important;
+      line-height: 1.2;
+      margin-top: 24px;
+      text-align: center;
     }
   }
-  .icon-dl {
-    display: flex;
-    gap: 1rem;
+
+  .banner-image {
+    padding: 0 15px;
     img {
       display: block;
-      width: 40%;
+      width: 100%;
+      max-width: 100%;
       height: auto;
     }
+  }
+
+  .box-left {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  .app-screen {
+    justify-content: center;
+    img {
+      display: block;
+      width: 30%;
+      height: auto;
+    }
+  }
+  .box-right {
+    width: 100%;
+    align-items: center;
   }
 }

@@ -1,4 +1,4 @@
-import { Col, Row } from "antd";
+import { Col, Flex, Row } from "antd";
 import React, { useCallback } from "react";
 import { useTranslation } from "react-i18next";
 import "./scss/main.scss";
@@ -72,65 +72,91 @@ export default function MainPage({}: Props) {
   }
 
   return (
-    <Row gutter={24}>
-      <Col span={24}>
-        <div className="banner-wrap">
-          <div className="container">
-            <Row>
-              <Col lg={{ span: 12, order: 1 }} xs={{ span: 24, order: 2 }}>
-                <div className="banner-content">
-                  <h1 className="heading">
-                    สมัครสมาชิก
-                    <br />
-                    สเวนเซ่นส์วันนี้ พร้อมรับสิทธิพิเศษมากมายรอคุณอยู่ที่นี่
-                  </h1>
-                  <p>
-                    พิเศษสุดๆ!&nbsp;สำหรับสมาชิกสเวนเซ่นส์ ยิ่งกิน ยิ่งได้
-                    ยิ่งคุ้ม&nbsp;ใครๆ ก็สมัครได้
-                    ใช้ง่ายสะดวกสบายพร้อมสิทธิประโยชน์มากมายเพื่อคนสำคัญเช่นคุณ&nbsp;รอไม่ได้แล้ว
-                    สมัครเลย
-                  </p>
-                  <div className="btn-delivery" />
-                </div>
-              </Col>
-              <Col lg={{ span: 12, order: 2 }} xs={{ span: 24, order: 1 }}>
-                <div className="banner-image">
-                  <img src="/banner-image.svg" alt="" />
-                </div>
-              </Col>
-            </Row>
+    <>
+      <Row gutter={24}>
+        <Col span={24}>
+          <div className="banner-wrap">
+            <div className="container">
+              <Row>
+                <Col lg={{ span: 12, order: 1 }} xs={{ span: 24, order: 2 }}>
+                  <div className="banner-content">
+                    <h1 className="heading">
+                      สมัครสมาชิก
+                      <br />
+                      สเวนเซ่นส์วันนี้ พร้อมรับสิทธิพิเศษมากมายรอคุณอยู่ที่นี่
+                    </h1>
+                    <p>
+                      พิเศษสุดๆ!&nbsp;สำหรับสมาชิกสเวนเซ่นส์ ยิ่งกิน ยิ่งได้
+                      ยิ่งคุ้ม&nbsp;ใครๆ ก็สมัครได้
+                      ใช้ง่ายสะดวกสบายพร้อมสิทธิประโยชน์มากมายเพื่อคนสำคัญเช่นคุณ&nbsp;รอไม่ได้แล้ว
+                      สมัครเลย
+                    </p>
+                    <div className="btn-delivery" />
+                  </div>
+                </Col>
+                <Col lg={{ span: 12, order: 2 }} xs={{ span: 24, order: 1 }}>
+                  <div className="banner-image">
+                    <img src="/banner-image.svg" alt="" />
+                  </div>
+                </Col>
+              </Row>
+            </div>
           </div>
-        </div>
-      </Col>
-      <Col span={24}>
-        <div className="carousel-box">
-          <h1>ดีลสุดคุ้ม</h1>
-          <Slider {...settings}>
-            <div className="deal-item">
-              <a>
-                <div className="image1" />
-              </a>
+        </Col>
+        <Col span={24}>
+          <div className="carousel-box">
+            <h1>{t("deal")}</h1>
+            <Slider {...settings}>
+              <div className="deal-item">
+                <a>
+                  <div className="image1" />
+                </a>
+              </div>
+              <div className="deal-item">
+                <a>
+                  <div className="image2" />
+                </a>
+              </div>
+              <div className="deal-item">
+                <a>
+                  <div className="image3" />
+                </a>
+              </div>
+              <div className="deal-item">
+                <a>
+                  <div className="image4" />
+                </a>
+              </div>
+            </Slider>
+            <h1>{t("news")}</h1>
+          </div>
+        </Col>
+        <Col span={24}>
+          <div className="container">
+            <div className="box-left">
+              <div className="column-content">
+                <img
+                  src="https://swensens1112.com/images/app-screen-webp.webp"
+                  alt=""
+                />
+              </div>
+              <div className="box-right">
+                <h1>{t("dl")}</h1>
+                <div className="app-screen">
+                  <img
+                    src="https://swensens1112.com/images/google-play.png"
+                    alt=""
+                  />
+                  <img
+                    src="https://swensens1112.com/images/app-store.png"
+                    alt=""
+                  />
+                </div>
+              </div>
             </div>
-            <div className="deal-item">
-              <a>
-                <div className="image2" />
-              </a>
-            </div>
-            <div className="deal-item">
-              <a>
-                <div className="image3" />
-              </a>
-            </div>
-            <div className="deal-item">
-              <a>
-                <div className="image4" />
-              </a>
-            </div>
-          </Slider>
-          <h1>ข่าว</h1>
-        </div>
-      </Col>
-
-    </Row>
+          </div>
+        </Col>
+      </Row>
+    </>
   );
 }

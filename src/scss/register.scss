@@ -1,0 +1,168 @@
+.box-register {
+  max-width: 480px;
+
+  margin: 0 auto;
+  border-radius: 10px;
+  background-color: #fff;
+  margin-bottom: 30px;
+  .box-header {
+    margin-top: 100px;
+    color: #fff;
+    height: 240px;
+    padding: 32px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #dbdbdb;
+    background-size: cover;
+    background-position: top;
+    background-image: url("https://swensens1112.com/images/card-head.png");
+  }
+
+  .box-body {
+    padding: 40px;
+  }
+
+  .ant-input {
+    width: 90%;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  .ant-input-password {
+    width: 90%;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .ant-picker {
+    font-size: 14px;
+    width: 90%;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  :where(&) {
+    .css-dev-only-do-not-override-1qhpsh8 {
+      .ant-picker-outlined {
+        :focus,
+        :focus-within {
+          border-color: #e21c1c !important;
+        }
+      }
+    }
+  }
+  :where(&) {
+    .css-dev-only-do-not-override-1qhpsh8 {
+      &.ant-picker-outlined {
+        &:hover {
+          border-color: #e21c1c !important;
+        }
+      }
+    }
+  }
+
+  .ant-input:focus {
+    border-color: #e21c23;
+  }
+  .ant-input-password:focus-within {
+    border-color: #e21c23;
+  }
+
+  .custom-radio-group .ant-radio-button-wrapper {
+    line-height: 1.25;
+    height: auto;
+    margin: 0 8px;
+    padding: 12px 32px;
+    border-radius: 30px;
+    border: 1px solid #d2d2d2;
+    outline: none;
+  }
+  .ant-radio-group-solid {
+    &:where(&) {
+      .css-dev-only-do-not-override-1qhpsh8 {
+        &.ant-radio-button-wrapper-checked:not(
+            .ant-radio-button-wrapper-disabled
+          ):hover {
+          color: #fff;
+          background: #e21c23;
+          border-color: #e21c23;
+        }
+      }
+    }
+    &:where(&) {
+      .css-dev-only-do-not-override-1qhpsh8 {
+        &.ant-radio-button-wrapper-checked:not(
+            .ant-radio-button-wrapper-disabled
+          ) {
+          color: #fff;
+          background: #e21c23;
+          border-color: #e21c23;
+        }
+      }
+    }
+  }
+  .custom-radio-group .ant-radio-button-wrapper::before {
+    display: none;
+  }
+  .ant-checkbox-checked .ant-checkbox-inner {
+    background-color: #e21c1c;
+    border-color: #e21c1c;
+    :focus {
+      background-color: #e21c1c;
+      border-color: #e21c1c;
+    }
+  }
+  .ant-checkbox-wrapper {
+    a {
+      color: #e21c1c;
+    }
+  }
+  .ant-checkbox span.ant-checkbox-inner {
+    background-color: transparent;
+    border-radius: 50%;
+  }
+
+  .ant-checkbox-checked .ant-checkbox-inner {
+    background-color: #e21c1c !important;
+    border-color: #e21c1c;
+  }
+  .ant-checkbox-wrapper:hover .ant-checkbox-checked .ant-checkbox-inner {
+    background-color: #e21c1c !important;
+    border-color: #e21c1c !important;
+  }
+  .ant-checkbox-checked:hover .ant-checkbox-checked .ant-checkbox-inner {
+    background-color: #e21c1c !important;
+    border-color: #e21c1c !important;
+  }
+  .ant-checkbox-checked:after {
+    border-color: #e21c1c !important;
+  }
+  .ant-checkbox:hover::after {
+    border-color: #e21c1c !important;
+  }
+  .ant-checkbox:hover .ant-checkbox-inner {
+    border-color: #e21c1c !important;
+  }
+
+  .btn-summit {
+    font-size: 16px;
+    width: 100%;
+    height: 50px;
+    border-radius: 24px;
+    background-color: #e21c1c;
+  }
+  .ant-btn[disabled] {
+    color: rgba(0, 0, 0, 0.25);
+    background-color: #f4f4f4;
+    border-color: transparent;
+    text-shadow: none;
+    box-shadow: none;
+  }
+
+  .error-message{
+    color: #e21c1c;
+  }
+}

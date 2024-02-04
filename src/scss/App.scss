@@ -1,7 +1,6 @@
 .App {
   background: transparent;
   text-align: center;
-  
 }
 
 .content {
@@ -198,6 +197,14 @@
 }
 
 :where(.css-dev-only-do-not-override-1qhpsh8) {
+  .ant-btn-default {
+    :not(:disabled):not(.ant-btn-disabled):hover {
+      color: #e21c23 !important;
+    }
+  }
+}
+
+:where(.css-dev-only-do-not-override-1qhpsh8) {
   .ant-menu-light .ant-menu-item-selected,
   .ant-menu-light > .ant-menu .ant-menu-item-selected {
     background-color: transparent !important;
@@ -215,6 +222,11 @@
 }
 
 @media (max-width: 990px) {
+  .footer-social-list {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
   .navbar-sm {
     display: flex;
     justify-content: space-between;
